@@ -4,12 +4,16 @@ const path = require('path');
 
 module.exports = {
   ...withAntdLess({
-    reactStrictMode: true,
     lessVarsFilePath: './styles/variables.less',
     lessVarsFilePathAppendToEndOfContent: false,
     cssLoaderOptions: {},
     lessLoaderOptions: {
       javascriptEnabled: true,
+    },
+    trailingSlash: true,
+    reactStrictMode: true,
+    images: {
+     unoptimized: true,
     },
     webpack(config) {
       config.resolve.alias.react = path.resolve('./node_modules/react');
@@ -20,6 +24,12 @@ module.exports = {
       return config;
     },
   }),
+  
+  async exportPathMap() {
+    return {
+      '/': { page: '/' },
+    };
+  },
   publicRuntimeConfig: {
     INFURA_PROJECT_ID: process.env.INFURA_PROJECT_ID,
     INFURA_PROJECT_SECRET: process.env.INFURA_PROJECT_ID,
