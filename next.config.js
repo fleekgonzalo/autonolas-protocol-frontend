@@ -13,7 +13,7 @@ module.exports = {
     trailingSlash: true,
     reactStrictMode: true,
     images: {
-         unoptimized: true,
+      unoptimized: true,
     },
     webpack(config) {
       config.resolve.alias.react = path.resolve('./node_modules/react');
@@ -40,4 +40,5 @@ module.exports = {
     styledComponents: true,
   },
 };
-module.exports = nextConfig
+
+module.exports = nextConfig;
