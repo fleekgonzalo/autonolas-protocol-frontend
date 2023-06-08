@@ -13,7 +13,8 @@ module.exports = {
     trailingSlash: true,
     reactStrictMode: true,
     images: {
-     unoptimized: true,
+         loader: 'akamai',
+         path: '',
     },
     webpack(config) {
       config.resolve.alias.react = path.resolve('./node_modules/react');
