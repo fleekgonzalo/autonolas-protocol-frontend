@@ -6,7 +6,8 @@
     "lint": "eslint ./",
     "test": "jest",
     "testw": "jest --watch",
-    "testc": "jest --coverage --verbose"
+    "testc": "jest --coverage --verbose",
+    "export": "next export"
   },
   "dependencies": {
     "@ant-design/icons": "^4.5.0",
