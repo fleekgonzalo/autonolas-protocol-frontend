@@ -2,7 +2,7 @@
 const withAntdLess = require('next-plugin-antd-less');
 const path = require('path');
 
-module.exports = {
+const nextConfig = {
   ...withAntdLess({
     lessVarsFilePath: './styles/variables.less',
     lessVarsFilePathAppendToEndOfContent: false,
@@ -41,4 +41,4 @@ module.exports = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = module.exports.default || nextConfig;
