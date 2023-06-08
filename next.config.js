@@ -41,4 +41,4 @@ const nextConfig = {
   },
 };
 
-module.exports = module.exports.default || nextConfig;
+module.exports =  nextConfig;
